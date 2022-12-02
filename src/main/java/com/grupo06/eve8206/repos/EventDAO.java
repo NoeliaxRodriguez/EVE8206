@@ -1,4 +1,4 @@
-package com.grupo06.usu8206.repos;
+package com.grupo06.eve8206.repos;
 
 import com.grupo06.eve8206.mysql.entities.Event;
 import org.springframework.data.repository.CrudRepository;
@@ -15,7 +15,7 @@ import java.util.List;
  */
 
 
-public interface EventDAO extends CrudRepository<Event, int> {
+public interface EventDAO extends CrudRepository<Event, Integer>{
 
 
     // En el cuerpo de esta interfaz debemos incorporar todas las queries en forma de métodos que necesitemos realizar sobre nuestras tablas:
