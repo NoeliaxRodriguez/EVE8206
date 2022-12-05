@@ -2,7 +2,9 @@ package com.grupo06.eve8206.mysql.entities;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.data.annotation.PersistenceConstructor;
 
 
@@ -30,6 +32,8 @@ public Event(String categoria, String ciudad, Date fecha, String nombre, String 
     private String categoria;
 
     private String ciudad;
+
+    @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ss")
 
     private Date fecha;
 
@@ -97,8 +101,8 @@ public Event(String categoria, String ciudad, Date fecha, String nombre, String 
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
-/*
-    public List<Ticket> getTickets() {
+
+  /*  public List<Ticket> getTickets() {
         return this.tickets;
     }
 
@@ -119,7 +123,7 @@ public Event(String categoria, String ciudad, Date fecha, String nombre, String 
 
         return ticket;
     }
-    public boolean modifyEvent(String nombre, String categoria, Date date1, String ciudad, String sala, String imagen){
+    public boolean modifyEvent(String nombre, String categoria, Date date1, String ciudad, String sala, String imagen) {
         this.nombre = nombre;
         this.categoria = categoria;
         this.fecha = date1;
@@ -128,6 +132,6 @@ public Event(String categoria, String ciudad, Date fecha, String nombre, String 
         this.imagen = imagen;
         return true;
     }
+   */
 
- */
 }
